@@ -23,7 +23,7 @@ import lombok.Setter;
 public class GasStation {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @ManyToOne
@@ -35,6 +35,9 @@ public class GasStation {
 
   @Column
   private Float latitude;
+
+  @Column
+  private Float longitude;
 
   @Column
   @Builder.Default
