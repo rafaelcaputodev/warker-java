@@ -1,0 +1,17 @@
+version: "3"
+services:
+    pgsql:
+        container_name: Warker
+        image: "postgres:13"
+        ports:
+            - "5432:5432"
+        environment:
+            PGPASSWORD: "warker"
+            POSTGRES_DB: "warker"
+            POSTGRES_USER: "warker"
+            POSTGRES_PASSWORD: "warker"
+        volumes:
+            - "sailpgsql:/var/lib/postgresql/data"
+volumes:
+    sailpgsql:
+        driver: local
